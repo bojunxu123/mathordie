@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math or Die</title>
+    <link rel="stylesheet" href="MathOrDie.css">
+    <script src="MathOrDie.js" defer></script>
+</head>
+<body>
+    <div id="main-menu" class="container">
+        <h1>Math or Die</h1>
+        <p>Welcome to Math or Die! Solve the math problems to survive.</p>
+        <button onclick="startGame()">Start Game</button>
+        <button onclick="showSection('tutorial-section')">How to Play</button>
+    </div>
+    <div id="game-section" class="container" style="display:none;">
+        <div class="score-container" style="font-size: 1.5em; margin-bottom: 10px;">
+            Score: <span id="score">0</span>
+        </div>
+        <p id="question"></p>
+        <input type="text" id="answer" placeholder="Enter your answer">
+        <button id="submit-button">Submit</button>
+        <p id="result"></p>
+        <div id="timer-bar"></div>
+    </div>
+    <div id="tutorial-section" class="container" style="display:none;">
+        <h1>How to Play</h1>
+        <ul>
+            <li>You will receive a math problem to solve.</li>
+            <li>Type your answer in the input box and click "Submit".</li>
+            <li>If your answer is correct, you will gain points.</li>
+            <li>Note that your answer should always be rounded to the nearest whole number.</li>
+            <li>If your answer is incorrect, you might face consequences.</li>
+            <li>The game ends when you die.</li>
+            <li>Have fun!</li>
+        </ul>
+        <button onclick="startGame()">Start Game</button>
+        <button onclick="showSection('main-menu')">Back to Main Menu</button>
+    </div>
+    <div id="roulette-section" class="container" style="display:none; background-color: black;">
+        <div id="final-score"></div>
+        <div class="roulette-image-area">
+            <img src="gun.png" alt="revolver" width="500" height="500" style="position: absolute; left: 0; top: 30px;">
+            <img id="fire" src="fire.png" alt="fire" width="500" height="500" style="position: absolute; left: 0; top: -120px; display: none;">
+        </div>
+        <div class="roulette-buttons">
+            <button id="play-again" style="display: none;" onclick="showSection('main-menu')">Play Again</button>
+            <button id="next-question" style="display: none;" disabled onclick="nextQuestionAfterRoulette()">Next Question</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+body {
+    font-family:'Courier New', Courier, monospace;
+    background-color: black;
+    color: black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: red;
+}
+button{
+    display:inline-block;
+    margin: 10px;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #005f99;
+}
+button:active {
+    background-color: #004466;
+}
+#timer-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+#timer-bar div {
+    height: 100%;
+    width: 100%;
+    background-color: #007acc;
+    transition: width linear;
+}
+
+.roulette-image-area {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background-color: black;
+    margin: 0 auto;
+}
+.roulette-buttons {
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 520;
+}
+.roulette-buttons button {
+    min-width: 180px;
+    font-size: 1.2em;
+    margin: 10px 0 0 0;
+}
+#tutorial-section ul {
+    text-align: left;
+    margin-left: 2em;
+    display: block;
+}
+#final-score {
+    text-align: center;
+    font-size: 2em;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    margin-bottom: 2px;
+    display: none;
+}
